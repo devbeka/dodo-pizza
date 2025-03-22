@@ -1,14 +1,13 @@
-import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
+import { Container, Title } from '@/components/shared'
 
 const Home = () => {
-	return (
-		<>
-			<h1>Home</h1>
-			<Button>Card</Button>
-			<Checkbox />
-		</>
-	)
+  return (
+    <>
+      <Container className='mt-10'>
+        <Title text='Все пиццы' size='lg' className='font-extrabold' />
+      </Container>
+    </>
+  )
 }
 
 export default Home
