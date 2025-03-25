@@ -1,7 +1,17 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -119,4 +129,38 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+* {
+  font-family: var(--font-nunito), sans-serif;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background: #fff;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #dbdadd;
+  border-radius: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #dbdadd;
+}
+
+#nprogress .bar {
+  @apply bg-primary;
+}
+
+#nprogress .peg {
+  @apply shadow-md shadow-primary;
+}
+
+#nprogress .spinner-icon {
+  @apply border-t-primary border-l-primary;
 }
